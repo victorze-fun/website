@@ -1,0 +1,5 @@
+[MASTER]
+ignore = migrations
+
+[BASIC]
+disable = C0111, E0307
