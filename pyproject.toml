@@ -5,23 +5,26 @@ description = ""
 authors = ["Victor <victorze@protonmail.com>"]
 readme = "README.md"
 
+
 [tool.poetry.dependencies]
 python = "^3.10"
 django = "^4.1.7"
 
 
-[tool.poetry.group.test.dependencies]
+[tool.poetry.group.dev.dependencies]
 pip = "^23.0.1"
 install = "^1.3.5"
 psycopg2-binary = "^2.9.5"
 ipython = "^8.10.0"
-pylint = "^2.16.2"
 black = "^23.1.0"
+djlint = "^1.19.16"
 
-
-[tool.poetry.group.dev.dependencies]
-black = "^23.1.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.djlint]
+ignore="T003,H030,H031"
+preserve_blank_lines=true
