@@ -5,11 +5,10 @@ description = ""
 authors = ["Victor <victorze@protonmail.com>"]
 readme = "README.md"
 
-
 [tool.poetry.dependencies]
 python = "^3.10"
 django = "^4.1.7"
-
+environs = "^9.5.0"
 
 [tool.poetry.group.dev.dependencies]
 pip = "^23.0.1"
@@ -19,11 +18,9 @@ ipython = "^8.10.0"
 black = "^23.1.0"
 djlint = "^1.19.16"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
 
 [tool.djlint]
 ignore="T003,H030,H031"
