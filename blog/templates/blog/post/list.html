@@ -1,4 +1,4 @@
-{% extends "app/base.html" %}
+{% extends "blog/base.html" %}
 
 {% block title %}My Blog{% endblock %}
 
@@ -6,7 +6,7 @@
     <h1>My Blog</h1>
     {% for post in posts %}
         <h2>
-            <a href="{% url 'app:post_detail' post.id %}">{{ post.title }}</a>
+            <a href="{% url 'blog:post_detail' post.id %}">{{ post.title }}</a>
         </h2>
         <p class="date">Published {{ post.publish }} by {{ post.author }}</p>
         {{ post.body|truncatewords:30|linebreaks }}

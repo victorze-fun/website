@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "blog"
+name = "website"
 version = "0.1.0"
 description = ""
 authors = ["Victor <victorze@protonmail.com>"]
