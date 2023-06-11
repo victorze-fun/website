@@ -1,7 +1,17 @@
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import get_object_or_404, render
+from django.views.generic import ListView
 
 from .models import Post
+
+
+class PostListView(ListView):
+    # passes the page requested in a variable called page_obj
+    # (model = Post) default -> query = Post.objects.all()
+    queryset = Post.published.all()
+    context_object_name = 'posts'  # default: object_list
+    paginate_by = 3
+    template_name = 'blog/post/list.html'  # default: blog/post_list
 
 
 def post_list(request):
